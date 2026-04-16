@@ -4,12 +4,23 @@ console.log("multiplicação- 3");
 console.log("divisão- 4");
 console.log("bhaskhara- B");
 console.log("Hipotenusa- H")
-console.log("Voltagem- V")
-let Defdocal = prompt("qual o calculo desejado?(olhar no console para informações das palavras chave para definir as contas)");
+console.log("Grandezas eletrônicas- E")
+let Defdocal = prompt("qual o calculo desejado?(olhar no console para informações das palavras chave para definir as contas)").toUpperCase();
 
 switch(Defdocal){
+    case "E":
+        console.log("grandezas elétricas selecionadas, favor olhar o console para palavras chave de contas")
+        console.log("Resistência- R")
+        console.log("corrente- I")
+        console.log("Potência- P")
+        console.log("Voltagem- V")
+        let GE= prompt("Digite a palavra chave para efetuar o cálculo").toUpperCase();
+        console.log("caso a grandeza não exista, deixar 0 no lugar dela.")
+        switch (GE){
     case"R":
-    resistência
+    let Ir = Number(prompt("digite a corrente do sistema (em Ampér)"))
+    let Vr = Number(prompt("digite a voltagem do sistema (em Volts)"))
+    let Pr = Number(prompt("digite a potência do sistema (em Watts)"))
     break;
     case "I":
         amper
@@ -18,7 +29,6 @@ switch(Defdocal){
         potencia
     break;
     case "V":
-        console.log("caso a gbrandeza não exista, deixar 0 no lugar dela.")
         let Iv = Number(prompt("Digite a corrente do sistema (em Amper)"))
         let Rv = Number(prompt("Digite a resistência do sistema (em Ohm)"))
         let Wv = Number(prompt("Digite a potência do sistema"))
@@ -34,7 +44,10 @@ switch(Defdocal){
             const V = Wv/Iv
             console.log("A voltagem é de "+ V)
         }
-
+        else {
+            console.log("Entrada inválida (2 ou mais grandezas = a zero)")
+        }
+        }
     break;
     case "H" :
     let cat1 = Number(prompt("digite o primeiro cateto."))
@@ -62,7 +75,7 @@ case "1" :
     for( i=0; i<n; i++ ) {
     var numero = Number(prompt("digite o número a somar/ser somado"));
     soma = soma + numero; 
-    console.log("a soma total deu "+ soma)};
+    console.log("a soma total deu " + soma)};
 console.log("programa finalizado, favor recarregar a página para reiniciar a calculadora");
 break;
     
@@ -81,7 +94,7 @@ case "3" :
 let numm1 = Number(prompt("digite o primeiro número a ser multiplicado"))
 let numm = Number(prompt("digite o segundo número a ser multiplicado"))
 const multres = numm1*numm
-alert("a multiplicação dos números deu "+ multres)
+alert("a multiplicação dos números deu " + multres)
 console.log("programa finalizado, favor recarregar a página para reiniciar a calculadora");
 break;
 
