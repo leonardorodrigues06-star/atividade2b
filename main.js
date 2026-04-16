@@ -25,7 +25,7 @@ switch (Defdocal) {
         console.log("Valor Presente - VP");
         console.log("Valor Futuro - VF");
 
-        let opcao = prompt("Qual cálculo deseja fazer?").toUpperCase();
+        let opcao = prompt("Qual cálculo deseja fazer?");
 
         switch (opcao) {
 
@@ -35,7 +35,7 @@ switch (Defdocal) {
                 let t1 = Number(prompt("Tempo:"));
 
                 let J = C1 * i1 * t1;
-                console.log("Juros:", J);
+                console.log("Juros: " + J);
                 break;
 
             case "MS":
@@ -44,7 +44,7 @@ switch (Defdocal) {
                 let t2 = Number(prompt("Tempo:"));
 
                 let M1 = C2 * (1 + i2 * t2);
-                console.log("Montante:", M1);
+                console.log("Montante: " + M1);
                 break;
 
             case "JC":
@@ -55,7 +55,7 @@ switch (Defdocal) {
                 let M2 = C3 * (1 + i3) ** t3;
                 let J2 = M2 - C3;
 
-                console.log("Juros:", J2);
+                console.log("Juros: " + J2);
                 break;
 
             case "MC":
@@ -64,7 +64,7 @@ switch (Defdocal) {
                 let t4 = Number(prompt("Tempo:"));
 
                 let M3 = C4 * (1 + i4) ** t4;
-                console.log("Montante:", M3);
+                console.log("Montante: " + M3);
                 break;
 
             case "TJ":
@@ -73,7 +73,7 @@ switch (Defdocal) {
                 let t5 = Number(prompt("Tempo:"));
 
                 let taxa = J3 / (C5 * t5);
-                console.log("Taxa:", taxa);
+                console.log("Taxa: " + taxa);
                 break;
 
             case "TP":
@@ -82,7 +82,7 @@ switch (Defdocal) {
                 let i5 = Number(prompt("Taxa:"));
 
                 let tempo = J4 / (C6 * i5);
-                console.log("Tempo:", tempo);
+                console.log("Tempo: " + tempo);
                 break;
 
             case "DS":
@@ -93,8 +93,8 @@ switch (Defdocal) {
                 let D = N * i6 * t6;
                 let A = N - D;
 
-                console.log("Desconto:", D);
-                console.log("Valor atual:", A);
+                console.log("Desconto: " + D);
+                console.log("Valor atual: " + A);
                 break;
 
             case "PR":
@@ -103,7 +103,7 @@ switch (Defdocal) {
                 let t7 = Number(prompt("Número de parcelas:"));
 
                 let PMT = (C7 * i7) / (1 - (1 + i7) ** (-t7));
-                console.log("Parcela:", PMT);
+                console.log("Parcela: " + PMT);
                 break;
 
             case "VP":
@@ -112,7 +112,7 @@ switch (Defdocal) {
                 let t8 = Number(prompt("Tempo:"));
 
                 let VP = VF / (1 + i8) ** t8;
-                console.log("Valor presente:", VP);
+                console.log("Valor presente: " + VP);
                 break;
 
             case "VF":
@@ -121,7 +121,7 @@ switch (Defdocal) {
                 let t9 = Number(prompt("Tempo:"));
 
                 let VF2 = VP2 * (1 + i9) ** t9;
-                console.log("Valor futuro:", VF2);
+                console.log("Valor futuro: " + VF2);
                 break;
 
             default:
