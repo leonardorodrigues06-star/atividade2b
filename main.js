@@ -6,10 +6,128 @@ console.log("bhaskhara- B");
 console.log("Hipotenusa- H");
 console.log("Grandezas eletrônicas- E");
 console.log("Logaritmo- L");
+console.log("cálculos financeiros- F");
 
 let Defdocal = prompt("qual o calculo desejado?(olhar no console para informações das palavras chave para definir as contas)").toUpperCase();
 
 switch (Defdocal) {
+
+    case "F":
+        console.log("calculos financeiros selecionado, por favor, escolha a palavra chave adequada");
+        console.log("Juros Simples - JS");
+        console.log("Montante Simples - MS");
+        console.log("Juros Compostos - JC");
+        console.log("Montante Composto - MC");
+        console.log("Taxa de Juros - TJ");
+        console.log("Tempo - TP");
+        console.log("Desconto Simples - DS");
+        console.log("Parcela (PRICE) - PR");
+        console.log("Valor Presente - VP");
+        console.log("Valor Futuro - VF");
+
+        let opcao = prompt("Qual cálculo deseja fazer?").toUpperCase();
+
+        switch (opcao) {
+
+            case "JS":
+                let C1 = Number(prompt("Capital inicial:"));
+                let i1 = Number(prompt("Taxa (ex: 0.05):"));
+                let t1 = Number(prompt("Tempo:"));
+
+                let J = C1 * i1 * t1;
+                console.log("Juros:", J);
+                break;
+
+            case "MS":
+                let C2 = Number(prompt("Capital inicial:"));
+                let i2 = Number(prompt("Taxa:"));
+                let t2 = Number(prompt("Tempo:"));
+
+                let M1 = C2 * (1 + i2 * t2);
+                console.log("Montante:", M1);
+                break;
+
+            case "JC":
+                let C3 = Number(prompt("Capital inicial:"));
+                let i3 = Number(prompt("Taxa:"));
+                let t3 = Number(prompt("Tempo:"));
+
+                let M2 = C3 * (1 + i3) ** t3;
+                let J2 = M2 - C3;
+
+                console.log("Juros:", J2);
+                break;
+
+            case "MC":
+                let C4 = Number(prompt("Capital inicial:"));
+                let i4 = Number(prompt("Taxa:"));
+                let t4 = Number(prompt("Tempo:"));
+
+                let M3 = C4 * (1 + i4) ** t4;
+                console.log("Montante:", M3);
+                break;
+
+            case "TJ":
+                let J3 = Number(prompt("Juros:"));
+                let C5 = Number(prompt("Capital:"));
+                let t5 = Number(prompt("Tempo:"));
+
+                let taxa = J3 / (C5 * t5);
+                console.log("Taxa:", taxa);
+                break;
+
+            case "TP":
+                let J4 = Number(prompt("Juros:"));
+                let C6 = Number(prompt("Capital:"));
+                let i5 = Number(prompt("Taxa:"));
+
+                let tempo = J4 / (C6 * i5);
+                console.log("Tempo:", tempo);
+                break;
+
+            case "DS":
+                let N = Number(prompt("Valor nominal:"));
+                let i6 = Number(prompt("Taxa:"));
+                let t6 = Number(prompt("Tempo:"));
+
+                let D = N * i6 * t6;
+                let A = N - D;
+
+                console.log("Desconto:", D);
+                console.log("Valor atual:", A);
+                break;
+
+            case "PR":
+                let C7 = Number(prompt("Valor financiado:"));
+                let i7 = Number(prompt("Taxa:"));
+                let t7 = Number(prompt("Número de parcelas:"));
+
+                let PMT = (C7 * i7) / (1 - (1 + i7) ** (-t7));
+                console.log("Parcela:", PMT);
+                break;
+
+            case "VP":
+                let VF = Number(prompt("Valor futuro:"));
+                let i8 = Number(prompt("Taxa:"));
+                let t8 = Number(prompt("Tempo:"));
+
+                let VP = VF / (1 + i8) ** t8;
+                console.log("Valor presente:", VP);
+                break;
+
+            case "VF":
+                let VP2 = Number(prompt("Valor presente:"));
+                let i9 = Number(prompt("Taxa:"));
+                let t9 = Number(prompt("Tempo:"));
+
+                let VF2 = VP2 * (1 + i9) ** t9;
+                console.log("Valor futuro:", VF2);
+                break;
+
+            default:
+                console.log("Opção inválida!");
+        }
+        break;
 
     case "L":
         console.log("=== CALCULADORA DE LOGARITMO ===");
@@ -77,8 +195,6 @@ switch (Defdocal) {
                 if (Vr == 0) {
                     const R = Pr / (Ir * Ir);
                     console.log("a resisência do sistema é " + R);
-                } else {
-                    console.log("Entradas inválidas (duas ou mais grandezas = 0)");
                 }
                 break;
 
@@ -100,8 +216,6 @@ switch (Defdocal) {
                 if (Pi == 0) {
                     const I = Vi / Ri;
                     console.log("A corrente do sistema é " + I);
-                } else {
-                    console.log("Entradas inválidas (duas ou mais grandezas = 0)");
                 }
                 break;
 
@@ -144,8 +258,6 @@ switch (Defdocal) {
                 if (Rv == 0) {
                     const V = Wv / Iv;
                     console.log("A voltagem é de " + V);
-                } else {
-                    console.log("Entrada inválida (2 ou mais grandezas = a zero)");
                 }
         }
         break;
